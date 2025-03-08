@@ -1,0 +1,130 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+html {
+	color-scheme: light;
+	overscroll-behavior: none;
+}
+
+:root {
+	--font-body: Corbel, Verdana, Arial;
+	--font-head: Bahnschrift, 'Alef';
+	--font-number: Verdana, Arial;
+
+	--sidebar-width: 14rem;
+
+	--base-color: hsl(210, 100%, 56%); /* Base blue */
+	--darkest: hsl(214, 65%, 11%); /* Darkest shade */
+	--darker: hsl(215, 66%, 19%); /* Darker shade */
+	--dark: hsl(216, 64%, 26%); /* Dark shade */
+	--mid: hsl(217, 63%, 35%); /* Mid-tone */
+	--light: #4a90e2; /* Light shade */
+	--lighter: #7fbfff; /* Lighter shade */
+	--lightest: #b3d9ff; /* Lightest shade */
+	--text-light: #ffffff; /* White for text */
+	--text-dark: #0a1a2f; /* Dark text for contrast */
+
+	--color-dark: #111;
+	--color-primary: #1a1a1a;
+	--color-secondary: #292929;
+	--color-tertiary: #ccc;
+	--color-light: #fff;
+	--color-accent: ;
+	--color-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
+	--color-success: #6ec99f;
+	--color-warn: #ffcc00;
+	--color-error: #e3693d;
+}
+
+:root {
+	--color-background: #1e1e1e; /* Dark Gray - Main background */
+	--color-surface: #2c2c2c; /* Slightly lighter dark gray, for cards or panels */
+	--color-primary: rgb(159, 52, 245); /* Purple - Your main brand color */
+	--color-primary-rgb: 159, 52, 245;
+	--color-secondary: #64b5f6; /* Light Blue - Complementary color */
+	--color-tertiary: #e1bee7; /* Light Lavender - Subtle background elements */
+    --color-accent: #fde7e2; /* Light Pink - Highlight color */
+	--color-text: #ffffff; /* White - Main text color */
+	--color-text-secondary: #e0e0e0; /* Light Gray - Secondary text, labels */
+	--color-text-disabled: #777777; /* Medium Gray - Disabled text */
+	--color-success: rgb(76, 175, 80); /* Green - Positive changes */
+	--color-success-rgb: 76, 175, 80;
+	--color-danger: rgb(244, 67, 54); /* Red - Negative changes */
+	--color-danger-rgb: 244, 67, 54;
+	--color-warning: #ffc107; /* Yellow/Amber - Warnings, alerts */
+	--color-info: #64b5f6; /* Light Blue - Information, hints (same as secondary) */
+	--color-light: #ffffff; /* White - Light elements, borders on dark backgrounds */
+	--color-dark: #1e1e1e; /* Dark Gray - Dark elements, same as background */
+}
+
+:root {
+	/* Light Mode Overrides */
+	--color-background: #f8f8f8; /* Very light gray background */
+	--color-surface: #ffffff; /* White surface for cards/panels */
+	--color-text: #333333; /* Dark gray text */
+	--color-text-secondary: #666666; /* Medium gray secondary text */
+	--color-text-disabled: #aaaaaa; /* Light gray disabled text */
+	--color-light: #e0e0e0; /* Light gray for borders/dividers */
+	--color-dark: #333333; /* Dark gray for very dark elements, matching text */
+}
+
+body {
+	min-height: 100vh;
+	/* background-image: linear-gradient(to bottom left, var(--color-bg-1), var(--color-bg-2)); */
+	background-color: var(--color-background);
+	color: var(--color-text);
+	font-family: var(--font-body);
+}
+
+.glass {
+	background-color: var(--color-glass);
+	border: 1px solid var(--color-border);
+	backdrop-filter: 5px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--font-head);
+}
+
+h1 {
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin: 0;
+}
+
+h4 {
+	font-weight: 400;
+}
+
+.number {
+	font-family: var(--font-number);
+}
+
+.visually_hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: auto;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}
+
+i,
+img,
+svg {
+	vertical-align: middle;
+}
