@@ -1,5 +1,5 @@
 <script>
-    let { type, name, id, placeholder, required, autocomplete, autofocus, pattern, title, minlength, value = $bindable("")} = $props();
+    let { type, name, id, placeholder, required, autocomplete, autofocus, pattern, title, minlength, maxlength, value = $bindable("")} = $props();
 	import 'remixicon/fonts/remixicon.css';
 
     let isPassword = type === "password";
@@ -16,7 +16,7 @@
 </script>
 
 <label for="id" style:--content={`"${placeholder}"`}>
-    <input {type} {name} {id} {required} {autocomplete} {autofocus} {pattern} {title} {minlength} placeholder="" bind:value>
+    <input {type} {name} {id} {required} {autocomplete} {autofocus} {pattern} {title} {minlength} {maxlength} placeholder="" bind:value>
     {#if isPassword}
     <button type="button" onclick={toggleShow} aria-label="toggle password"><i class="{isVisible ? 'ri-eye-line' : 'ri-eye-off-line'}"></i></button>
     {/if}
@@ -63,6 +63,7 @@
         & input {
             width: 100%;
             padding: 1rem;
+            padding-right: 3rem;
             background-color: transparent;
             border: 0;
 

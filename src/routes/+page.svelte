@@ -1,7 +1,8 @@
 <script>
 	import "$lib/styles/app.css";
 	import "remixicon/fonts/remixicon.css";
-    // import heroImg from "$lib/images/hero_image.png";
+	import { onMount } from "svelte";
+    import heroImg from "$lib/images/hero_image.png";
 
 	let isMenuVisible = $state(false);
 	function toggleMenu() {
@@ -39,7 +40,7 @@
 	</nav>
 </header>
 
-<div class="hero_section">
+<div class="hero_section" style:--bgImg="url('{heroImg}')">
 	<div class="text_box">
 		<h1>Trade <svg width="40" height="40"><use href="#arrow"/></svg> <br/><span class="accent">Smarter</span>, Not Harder</h1>
 		<p class="subtext">Automate your trading strategies with precision and efficiency. Trade Ninja empowers you to make smarter decisions and maximize your profits effortlessly.</p>
@@ -189,7 +190,7 @@
 	.hero_section {
 		min-height: 100vh;
 		background-color: var(--color-tertiary);
-		background-image: url("/hero_image.png"), radial-gradient(30rem at 80% -5%, var(--color-secondaryf, #d7dffd) 60%, transparent), radial-gradient(20rem at 100% 100%, var(--color-secondaryf, #d7dffd) 50%, transparent), radial-gradient(ellipse 40rem 20rem at 10% 100%, var(--color-accent) 50%, transparent);
+		background-image: var(--bgImg), radial-gradient(30rem at 80% -5%, var(--color-secondaryf, #d7dffd) 60%, transparent), radial-gradient(20rem at 100% 100%, var(--color-secondaryf, #d7dffd) 50%, transparent), radial-gradient(ellipse 40rem 20rem at 10% 100%, var(--color-accent) 50%, transparent);
 		background-size: contain;
 		background-position: center right;
 		background-repeat: no-repeat;
